@@ -19,13 +19,16 @@ Auth::routes();
 
 Route::get('/home', 'CoderlyticController@index');
 Route::get('/analytics/generate', 'CoderlyticController@generateAnalytics');
+Route::get('/analysis/generate/{id}', 'CoderlyticController@generateAnalytics');
 Route::get('/analytics/download', 'CoderlyticController@download');
+Route::post('/upload', 'CoderlyticController@upload');
 
 //coderlytic Routes
 Route::group(['middleware'=> 'web'],function(){
   Route::resource('coderlytic','\App\Http\Controllers\CoderlyticController');
   Route::post('coderlytic/{id}/update','\App\Http\Controllers\CoderlyticController@update');
   Route::get('coderlytic/{id}/delete','\App\Http\Controllers\CoderlyticController@destroy');
+  Route::get('coderlytic/{id}/generate','\App\Http\Controllers\CoderlyticController@generateAnalytics');
   Route::get('coderlytic/{id}/deleteMsg','\App\Http\Controllers\CoderlyticController@DeleteMsg');
 });
 
