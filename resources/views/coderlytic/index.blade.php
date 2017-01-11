@@ -26,6 +26,17 @@
         </a><a href='{!!url("analytics/download")!!}'>
                         <button class = 'btn red' type = 'submit'>Download</button>
                     </a>
+                    <br>
+                    <br>
+                    <form method="POST" action='{!!url("upload")!!}' accept-charset="UTF-8" enctype="multipart/form-data">
+                    &nbsp; &nbsp; &nbsp;&nbsp;<label class="btn btn-default btn-file">
+                    {{ csrf_field() }}
+
+
+                        Select Excel <input type="file" name="xls" class="hidden">
+                    </label>
+                    <button class = 'btn red' type = 'submit'>Upload</button>
+                    </form>
                 <br>
                 </div>
                 <br>
@@ -59,8 +70,8 @@
                 <td>{!!$coderlytic->code_modularization!!}</td>
                 <td>
                     <div class = 'row'>
-                        <a href = '#modal1' class = 'delete btn-floating modal-trigger red' data-link = "/coderlytic/{!!$coderlytic->id!!}/deleteMsg" ><i class = 'material-icons'>delete</i></a>
-                        {{--<a href = '#' class = 'viewEdit btn-floating blue' data-link = '/coderlytic/{!!$coderlytic->id!!}/edit'><i class = 'material-icons'>edit</i></a>--}}
+                        {{--<a href = '#' class = 'delete btn-floating red' data-link = "/coderlytic/{!!$coderlytic->id!!}/generate" ><i class = 'material-icons'>Generate Report</i></a>--}}
+                        <a href = '{!!url("/analysis/generate/$coderlytic->id")!!}' class = 'viewEdit btn-floating blue'><i class = 'material-icons'>Generate Analytics</i></a>
                         {{--<a href = '#' class = 'viewShow btn-floating orange' data-link = '/coderlytic/{!!$coderlytic->id!!}'><i class = 'material-icons'>View</i></a>--}}
                     </div>
                 </td>
