@@ -9,7 +9,8 @@
         "laravel/framework": "5.3.*",
         "graham-campbell/github": "^5.1",
         "php-http/guzzle6-adapter": "^1.1",
-        "Amranidev/scaffold-interface": "v1.6.*"
+        "Amranidev/scaffold-interface": "v1.6.*",
+        "maatwebsite/excel": "~2.1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
