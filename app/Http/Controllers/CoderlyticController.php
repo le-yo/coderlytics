@@ -54,16 +54,16 @@ class CoderlyticController extends Controller
 
 
                 $coderlytic->no_of_contributors = count($result2);
-                print_r($result2[0]);
-                exit;
-                if (!empty($result2[0]['id']) > 0) {
+//                print_r($result2[0]);
+//                exit;
+//                if (!empty($result2['login']) > 0) {
                 foreach ($result2 as $key => $value) {
 
                     if ($value['id'] == $result['owner']['id']) {
                         $coderlytic->no_of_commits = $value['contributions'] - 1;
                     }
 
-                }
+//                }
             }
 
                 $coderlytic->code_modularization = 0;
