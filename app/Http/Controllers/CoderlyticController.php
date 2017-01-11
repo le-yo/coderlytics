@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Coderlytic;
 use Amranidev\Ajaxis\Ajaxis;
+use Maatwebsite\Excel\Facades\Excel;
 use URL;
 use GrahamCampbell\GitHub\Facades\GitHub;
 /**
@@ -75,6 +76,24 @@ class CoderlyticController extends Controller
      *
      * @return  \Illuminate\Http\Response
      */
+    public function download(){
+        $coderlytics = Coderlytic::all()->toArray();
+        Excel::create('Coderlytics-Report', function($excel) use($coderlytics){
+            // Set the title
+            $excel->setTitle("Coderlytics-github-report");
+
+            // Chain the setters
+            $excel->setCreator('Leonard')
+                ->setCompany('Brave')
+                ->setLastModifiedBy('Leonard')
+                ->setKeywords('Github,Brave, Analysis');
+
+            $excel->setDescription('Brave : Coderlytics-github-report');
+            $excel->sheet('Brave_Coderlytics_github_report', function($sheet) use($coderlytics){
+                    $sheet->fromArray($coderlytics);
+            });
+        })->download('xls');
+    }
     public function create()
     {
         $title = 'Create - coderlytic';
@@ -92,7 +111,11 @@ class CoderlyticController extends Controller
     {
         $username = $request->username;
         $repo = $request->repo;
+
+        $coderlytic = Coderlytic::whereFirstName($username)->first();
+        if(!$coderlytic){
         $coderlytic = new Coderlytic();
+        }
         $result = GitHub::repo()->show($username, $repo);
 
         $coderlytic->first_name = $result['owner']['login'];
@@ -111,7 +134,7 @@ class CoderlyticController extends Controller
 
         $coderlytic->repo_reviewed = $result['html_url'];
 
-        $coderlytic->code_comment = 0;
+        $coderlytic->code_comment = 1;
 
         $result2 = GitHub::repo()->contributors($username, $repo);
 
