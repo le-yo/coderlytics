@@ -73,7 +73,7 @@
                 <td>
                     <div class = 'row'>
                         {{--<a href = '#' class = 'delete btn-floating red' data-link = "/coderlytic/{!!$coderlytic->id!!}/generate" ><i class = 'material-icons'>Generate Report</i></a>--}}
-                        <a href = '{!!url("/analysis/generate/$coderlytic->id")!!}' class = 'viewEdit btn-floating blue'><i class = 'material-icons'>Generate Analytics</i></a>
+                        <a href = '{!!url("/analysis/generate/$coderlytic->id")!!}' class = 'viewEdit btn-floating blue'><i class = 'material-icons'>&nbsp;&nbsp;&nbsp;Generate Analytics</i></a>
                         {{--<a href = '#' class = 'viewShow btn-floating orange' data-link = '/coderlytic/{!!$coderlytic->id!!}'><i class = 'material-icons'>View</i></a>--}}
                     </div>
                 </td>
