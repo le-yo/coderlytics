@@ -23,6 +23,54 @@ class CoderlyticController extends Controller
      *
      * @return  \Illuminate\Http\Response
      */
+
+    public function mastergenerate(){
+
+        //instantiate new coder
+        $coderlytics = Coderlytic::all();
+
+        foreach ($coderlytics as $coderlytic) {
+            $repo = $coderlytic->repo_reviewed;
+            $result = GitHub::repo()->show($coderlytic->first_name, $repo);
+
+            $coderlytic->first_name = $result['owner']['login'];
+
+            $coderlytic->second_name = $result['owner']['login'];
+
+            if ($result['has_wiki'] == 1) {
+                $coderlytic->readme__file = 1;
+            } else {
+                $coderlytic->readme__file = 0;
+            }
+
+            $coderlytic->email_add = $coderlytic->first_name . "@github.com";
+
+            $coderlytic->github_url = $result['owner']['html_url'];
+
+            $coderlytic->repo_reviewed = $result['html_url'];
+
+            $coderlytic->code_comment = 0;
+
+            $result2 = GitHub::repo()->contributors($coderlytic->first_name, $repo);
+
+
+            $coderlytic->no_of_contributors = count($result2);
+
+            foreach ($result2 as $key => $value) {
+
+                if ($value['id'] == $result['owner']['id']) {
+                    $coderlytic->no_of_commits = $value['contributions'] - 1;
+                }
+
+            }
+            $coderlytic->code_modularization = 0;
+
+            $coderlytic->save();
+        }
+        return redirect('coderlytic');
+
+    }
+
     public function generateAnalytics($id){
 
         //instantiate new coder

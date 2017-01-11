@@ -25,7 +25,9 @@
             <button class = 'btn red' type = 'submit'>Add new Repo</button>
         </a><a href='{!!url("analytics/download")!!}'>
                         <button class = 'btn red' type = 'submit'>Download</button>
-                    </a>
+                    </a><a href='{!!url("analytics/mastergenerate")!!}'>
+                                                <button class = 'btn red' type = 'submit'>Master Generate</button>
+                                            </a>
                     <br>
                     <br>
                     <form method="POST" action='{!!url("upload")!!}' accept-charset="UTF-8" enctype="multipart/form-data">

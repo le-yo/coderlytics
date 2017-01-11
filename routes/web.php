@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/home', 'CoderlyticController@index');
 Route::get('/analytics/generate', 'CoderlyticController@generateAnalytics');
 Route::get('/analysis/generate/{id}', 'CoderlyticController@generateAnalytics');
+Route::get('analytics/mastergenerate', 'CoderlyticController@mastergenerate');
 Route::get('/analytics/download', 'CoderlyticController@download');
 Route::post('/upload', 'CoderlyticController@upload');
 
