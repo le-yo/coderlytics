@@ -59,9 +59,9 @@
                 <td>{!!$coderlytic->code_modularization!!}</td>
                 <td>
                     <div class = 'row'>
-                        {{--<a href = '#modal1' class = 'delete btn-floating modal-trigger red' data-link = "/coderlytic/{!!$coderlytic->id!!}/deleteMsg" ><i class = 'material-icons'>delete</i></a>--}}
+                        <a href = '#modal1' class = 'delete btn-floating modal-trigger red' data-link = "/coderlytic/{!!$coderlytic->id!!}/deleteMsg" ><i class = 'material-icons'>delete</i></a>
                         {{--<a href = '#' class = 'viewEdit btn-floating blue' data-link = '/coderlytic/{!!$coderlytic->id!!}/edit'><i class = 'material-icons'>edit</i></a>--}}
-                        <a href = '#' class = 'viewShow btn-floating orange' data-link = '/coderlytic/{!!$coderlytic->id!!}'><i class = 'material-icons'>View</i></a>
+                        {{--<a href = '#' class = 'viewShow btn-floating orange' data-link = '/coderlytic/{!!$coderlytic->id!!}'><i class = 'material-icons'>View</i></a>--}}
                     </div>
                 </td>
             </tr>
