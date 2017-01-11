@@ -185,7 +185,9 @@ return [
         Vinkla\Pusher\PusherServiceProvider::class,
 
 
-        'GrahamCampbell\GitHub\GitHubServiceProvider'
+        'GrahamCampbell\GitHub\GitHubServiceProvider',
+        //Maatwebsite excel
+        'Maatwebsite\Excel\ExcelServiceProvider'
 
     ],
 
@@ -235,7 +237,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-        'GitHub' => 'GrahamCampbell\GitHub\Facades\GitHub'
+        'GitHub' => 'GrahamCampbell\GitHub\Facades\GitHub',
+        'Excel' => 'Maatwebsite\Excel\Facades\Excel',
+
 
     ],
 
