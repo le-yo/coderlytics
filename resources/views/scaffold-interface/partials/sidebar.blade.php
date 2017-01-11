@@ -21,22 +21,22 @@
 								<i class="fa fa-dashboard"></i> <span>Analytics</span></i>
 							</a>
 						</li>
-						{{--@if(Auth::user()->hasRole('KTA Admin'))--}}
+						{{--@if(Auth::user()->hasRole('Admin'))--}}
 
-						{{--<li class="header">KTA Administrator</li>--}}
-						{{--<li class="treeview"><a href="{{url('/transporter')}}"><i class="fa fa-users"></i> <span>Transporters</span></a></li>--}}
+						{{--<li class="header">Administrator</li>--}}
+						{{--<li class="treeview"><a href="{{url('/users')}}"><i class="fa fa-users"></i> <span>Users</span></a></li>--}}
 						{{--<li class="treeview"><a href="{{url('/driver')}}"><i class="fa fa-users"></i> <span>Drivers</span></a></li>--}}
 						{{--@endif--}}
-						{{--@if(Auth::user()->hasRole('School Admin'))--}}
+{{--						@if(Auth::user()->hasRole('SAdmin'))--}}
 
 						{{--<li class="header">School Administrator</li>--}}
 						{{--<li class="treeview"><a href="{{url('/course')}}"><i class="fa fa-users"></i> <span>Courses</span></a></li>--}}
 						{{--<li class="treeview"><a href="{{url('/student')}}"><i class="fa fa-users"></i> <span>Students</span></a></li>--}}
 						{{--@endif--}}
-						{{--@if(Auth::user()->hasRole('Super Admin'))--}}
+						{{--@if(Auth::user()->hasRole('Admin'))--}}
 
-						{{--<li class="header">Super Administrator</li>--}}
-						{{--<li class="treeview"><a href="{{url('/users')}}"><i class="fa fa-users"></i> <span>Users</span></a></li>--}}
+						<li class="header">Super Administrator</li>
+						<li class="treeview"><a href="{{url('/users')}}"><i class="fa fa-users"></i> <span>Users</span></a></li>
 						{{--<li class="treeview"><a href="{{url('/roles')}}"><i class="fa fa-user-plus"></i> <span>Role</span></a></li>--}}
 						{{--<li class="treeview"><a href="{{url('/permissions')}}"><i class="fa fa-key"></i> <span>Permissions</span></a></li>--}}
 					    {{--@endif--}}

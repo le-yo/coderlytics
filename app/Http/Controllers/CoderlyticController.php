@@ -144,7 +144,7 @@ class CoderlyticController extends Controller
         foreach($result2 as $key=>$value){
 
             if($value['id'] == $result['owner']['id']){
-                $coderlytic->no_of_commits = $value['contributions']-1;
+                $coderlytic->no_of_commits = $value['contributions'];
             }
 
         }
