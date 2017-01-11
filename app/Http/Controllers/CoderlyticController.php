@@ -71,7 +71,7 @@ class CoderlyticController extends Controller
     public function index()
     {
         $title = 'Github Analysis';
-        $coderlytics = Coderlytic::paginate(10);
+        $coderlytics = Coderlytic::paginate(15);
         return view('coderlytic.index',compact('coderlytics','title'));
     }
 

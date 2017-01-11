@@ -2,17 +2,17 @@
 @section('title','Index')
 @section('content')
 
-<section class="content-header">
-<br>
-	<h1>
+{{--<section class="content-header">--}}
+{{--<br>--}}
+	{{--<h1>--}}
 	{{--Transporter--}}
-	</h1>
-	<ol class="breadcrumb">
-		<li><a href="/coderlytic"><i class="fa fa-dashboard"></i> Home</a></li>
-		<li class="active">Git Analysis</li>
-	</ol>
-	<br>
-</section>
+	{{--</h1>--}}
+	{{--<ol class="breadcrumb">--}}
+		{{--<li><a href="/coderlytic"><i class="fa fa-dashboard"></i> Home</a></li>--}}
+		{{--<li class="active">Git Analysis</li>--}}
+	{{--</ol>--}}
+	{{--<br>--}}
+{{--</section>--}}
 
 <section class="content">
 
