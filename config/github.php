@@ -48,8 +48,8 @@ return [
         ],
 
         'alternative' => [
-            'clientId'     => '2f4dba45ceff166099ef',
-            'clientSecret' => '11090f2ba1c350ff72ea7c24af825562413d290',
+            'clientId'     => '',
+            'clientSecret' => '',
             'method'       => 'application',
             // 'backoff'      => false,
             // 'cache'        => false,
