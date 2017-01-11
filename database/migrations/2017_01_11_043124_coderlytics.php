@@ -47,10 +47,10 @@ class Coderlytics extends Migration
          */
         
         
-        $table->timestamps();
+        //$table->timestamps();
         
         
-        $table->softDeletes();
+        //$table->softDeletes();
         
         // type your addition here
 
