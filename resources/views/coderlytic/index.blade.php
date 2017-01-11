@@ -20,9 +20,15 @@
     <h1>
        Github Repo Analysis
     </h1>
-        <form class = 'col s3' method = 'get' action = '{!!url("coderlytic")!!}/create'>
+        <div class="row">
+        &nbsp; &nbsp; &nbsp;<a href='{!!url("coderlytic")!!}/create'>
             <button class = 'btn red' type = 'submit'>Add new Repo</button>
-        </form>
+        </a><a href='{!!url("analytics/download")!!}'>
+                        <button class = 'btn red' type = 'submit'>Download</button>
+                    </a>
+                <br>
+                </div>
+                <br>
 
     <table class = "table table-striped table-bordered table-hover" style = 'background:#fff'>
         <thead>
