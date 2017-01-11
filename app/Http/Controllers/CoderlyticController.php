@@ -32,40 +32,45 @@ class CoderlyticController extends Controller
         foreach ($coderlytics as $coderlytic) {
             $repo = $coderlytic->repo_reviewed;
             $result = GitHub::repo()->show($coderlytic->first_name, $repo);
+            if(count($result)>0) {
+                $coderlytic->first_name = $result['owner']['login'];
 
-            $coderlytic->first_name = $result['owner']['login'];
+                $coderlytic->second_name = $result['owner']['login'];
 
-            $coderlytic->second_name = $result['owner']['login'];
-
-            if ($result['has_wiki'] == 1) {
-                $coderlytic->readme__file = 1;
-            } else {
-                $coderlytic->readme__file = 0;
-            }
-
-            $coderlytic->email_add = $coderlytic->first_name . "@github.com";
-
-            $coderlytic->github_url = $result['owner']['html_url'];
-
-            $coderlytic->repo_reviewed = $result['html_url'];
-
-            $coderlytic->code_comment = 0;
-
-            $result2 = GitHub::repo()->contributors($coderlytic->first_name, $repo);
-
-
-            $coderlytic->no_of_contributors = count($result2);
-
-            foreach ($result2 as $key => $value) {
-
-                if ($value['id'] == $result['owner']['id']) {
-                    $coderlytic->no_of_commits = $value['contributions'] - 1;
+                if ($result['has_wiki'] == 1) {
+                    $coderlytic->readme__file = 1;
+                } else {
+                    $coderlytic->readme__file = 0;
                 }
+                $coderlytic->email_add = $coderlytic->first_name . "@github.com";
 
+                $coderlytic->github_url = $result['owner']['html_url'];
+
+                $coderlytic->repo_reviewed = $repo;
+
+                $coderlytic->code_comment = 0;
+
+                $result2 = GitHub::repo()->contributors($coderlytic->first_name, $repo);
+
+
+                $coderlytic->no_of_contributors = count($result2);
+                print_r($result2[0]);
+                exit;
+                if (!empty($result2[0]['id']) > 0) {
+                foreach ($result2 as $key => $value) {
+
+                    if ($value['id'] == $result['owner']['id']) {
+                        $coderlytic->no_of_commits = $value['contributions'] - 1;
+                    }
+
+                }
             }
-            $coderlytic->code_modularization = 0;
 
-            $coderlytic->save();
+                $coderlytic->code_modularization = 0;
+
+                $coderlytic->save();
+            }
+
         }
         return redirect('coderlytic');
 
