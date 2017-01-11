@@ -52,15 +52,26 @@ class CoderlyticController extends Controller
 
                 $result2 = GitHub::repo()->contributors($coderlytic->first_name, $repo);
 
-
-                $coderlytic->no_of_contributors = count($result2);
+                if(count($result2)>1){
+                $coderlytic->no_of_contributors = 1;
+                }else{
+                $coderlytic->no_of_contributors = 0;
+                }
 
                 if ($coderlytic->first_name != 'jumbamathews') {
                 foreach ($result2 as $key => $value) {
 
                     if ($value['id'] == $result['owner']['id']) {
-                        $coderlytic->no_of_commits = $value['contributions'] - 1;
+                        if($value['contributions'] > 100 ){
+                        $coderlytic->no_of_commits = 2;
+                        }elseif(($value['contributions'] < 100) &&($value['contributions'] > 20) ){
+                            $coderlytic->no_of_commits = 1;
+                        }elseif($value['contributions'] < 20){
+                            $coderlytic->no_of_commits = 0;
+                        }
                     }
+
+
 
                 }
             }
