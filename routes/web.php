@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/analytics/generate', 'CoderlyticController@generateAnalytics');
+Route::get('/analytics/download', 'CoderlyticController@download');
 
 //coderlytic Routes
 Route::group(['middleware'=> 'web'],function(){
