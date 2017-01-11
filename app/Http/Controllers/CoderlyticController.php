@@ -23,10 +23,13 @@ class CoderlyticController extends Controller
      *
      * @return  \Illuminate\Http\Response
      */
-    public function generateAnalytics(){
+    public function generateAnalytics($id){
+
         //instantiate new coder
-        $coderlytic = new Coderlytic();
-        $result = GitHub::repo()->show('williwambu', 'DataStructuresAndAlgorithms');
+
+        $coderlytic = Coderlytic::find($id);
+        $repo = $coderlytic->repo_reviewed;
+        $result = GitHub::repo()->show($coderlytic->first_name, $repo);
 
         $coderlytic->first_name = $result['owner']['login'];
 
@@ -46,7 +49,7 @@ class CoderlyticController extends Controller
 
         $coderlytic->code_comment = 0;
 
-        $result2 = GitHub::repo()->contributors('williwambu', 'DataStructuresAndAlgorithms');
+        $result2 = GitHub::repo()->contributors($coderlytic->first_name, $repo);
 
 
         $coderlytic->no_of_contributors = count($result2);
@@ -60,14 +63,15 @@ class CoderlyticController extends Controller
         }
         $coderlytic->code_modularization = 0;
 
-       echo($coderlytic->save());
+        $coderlytic->save();
+        return redirect('coderlytic');
 
     }
 
     public function index()
     {
         $title = 'Github Analysis';
-        $coderlytics = Coderlytic::paginate(6);
+        $coderlytics = Coderlytic::paginate(10);
         return view('coderlytic.index',compact('coderlytics','title'));
     }
 
@@ -300,6 +304,68 @@ class CoderlyticController extends Controller
      * @param    int $id
      * @return  \Illuminate\Http\Response
      */
+    public function upload(Request $request) {
+
+        ini_set('max_execution_time', 180);
+
+        $file = array('xls' => $request->file('xlsx'));
+
+        $rules = array('xls' => 'required',); //mimes:jpeg,bmp,png and for max size max:10000
+
+        $extension = $request->file('xls')->getClientOriginalExtension(); // getting the file extension
+
+        $fileName = rand(11111,99999).'.'.$extension; // renaming the file
+
+
+        $request->file('xls')->move('storage',$fileName); // move it to the storage folder in the public assets
+
+        //$results = Excel::selectSheetsByIndex(1)->load();
+
+        //Excel::selectSheets('sheet1')->load();
+        Excel::selectSheetsByIndex(1)->load('storage/'.$fileName, function($reader) {
+
+            $reader -> each(function($sheet) {
+                $username = $sheet->github_username;
+
+                if((!empty($sheet->github_username)) && (!empty($sheet->repo_reviewed))){
+
+                $coderlytic = Coderlytic::whereFirstName($username)->first();
+                if(!$coderlytic){
+                    $coderlytic = new Coderlytic();
+                }
+
+                $coderlytic->first_name = $username;
+
+                $coderlytic->second_name = $sheet->second_name;
+
+                $coderlytic->readme__file = 0;
+
+                $coderlytic->email_add = $sheet->email_address;
+
+                $coderlytic->github_url = "https://github.com/".$username;
+
+                $coderlytic->repo_reviewed = $sheet->repo_reviewed;
+
+                $coderlytic->code_comment = 0;
+
+                $coderlytic->no_of_contributors = 0;
+
+                $coderlytic->no_of_commits = 0;
+
+
+                $coderlytic->code_modularization = 0;
+
+                $coderlytic->save();
+
+                }
+
+            });
+        });
+
+        return redirect('coderlytic');
+
+    }
+
     public function destroy($id)
     {
      	$coderlytic = Coderlytic::findOrfail($id);
