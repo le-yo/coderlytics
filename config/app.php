@@ -187,8 +187,12 @@ return [
 
         'GrahamCampbell\GitHub\GitHubServiceProvider',
         //Maatwebsite excel
-        'Maatwebsite\Excel\ExcelServiceProvider'
-
+        'Maatwebsite\Excel\ExcelServiceProvider',
+        Collective\Html\HtmlServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
+        \InfyOm\AdminLTETemplates\AdminLTETemplatesServiceProvider::class,
     ],
 
     /*
@@ -240,7 +244,9 @@ return [
         'GitHub' => 'GrahamCampbell\GitHub\Facades\GitHub',
         'Excel' => 'Maatwebsite\Excel\Facades\Excel',
 
-
+        'Form'      => Collective\Html\FormFacade::class,
+        'Html'      => Collective\Html\HtmlFacade::class,
+        'Flash'     => Laracasts\Flash\Flash::class,
     ],
 
 ];
