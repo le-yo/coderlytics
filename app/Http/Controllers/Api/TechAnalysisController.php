@@ -21,7 +21,7 @@ class TechAnalysisController extends Controller
 
         $user = $request->user();
 
-        $payload = $request->only(['user_id', 'github_repo_url']);
+        $payload = $request->only(['code_repo', 'primary_email','job_type']);
         $validator = Validator::make($payload, $rules);
 
         Log::create(array('user_id'=>$user->id,'content' =>json_encode($request->all())));
