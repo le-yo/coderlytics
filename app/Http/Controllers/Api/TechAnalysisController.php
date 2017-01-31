@@ -14,8 +14,9 @@ class TechAnalysisController extends Controller
     public function request(Request $request)
     {
         $rules = [
-            'github_repo_url' => ['required'],
-            'unique_id' => ['required'],
+            'code_repo' => ['required'],
+            'primary_email' => ['required'],
+            'job_type' => ['required'],
         ];
 
         $payload = $request->only(['user_id', 'github_repo_url']);
