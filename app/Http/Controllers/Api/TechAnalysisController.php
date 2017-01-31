@@ -19,10 +19,12 @@ class TechAnalysisController extends Controller
             'job_type' => ['required'],
         ];
 
+        $user = $request->user();
+
         $payload = $request->only(['user_id', 'github_repo_url']);
         $validator = Validator::make($payload, $rules);
 
-        Log::create(array('content' =>json_encode($request->all())));
+        Log::create(array('user_id'=>$user->id,'content' =>json_encode($request->all())));
         if ($validator->fails()) {
             return Response::create(['error' => $validator->errors(), 'code' => 422, 'message' => 'Missing field values'], 422);
         }
