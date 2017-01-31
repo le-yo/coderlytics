@@ -30,7 +30,7 @@ class TechAnalysisController extends Controller
         }
 
 
-        return Response::create(['success'=>1,'message'=>'Received new repo to score','github_repo_url' => $request->input('github_repo_url'), 'code' => 200], 200);
+        return Response::create(['success'=>1,'message'=>'Received new repo to score','code_repo' => $request->input('code_repo'), 'code' => 200], 200);
     }
 
     }
