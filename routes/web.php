@@ -40,3 +40,15 @@ Route::group(['middleware'=> 'web'],function(){
   Route::get('analysi/{id}/delete','\App\Http\Controllers\AnalysiController@destroy');
   Route::get('analysi/{id}/deleteMsg','\App\Http\Controllers\AnalysiController@DeleteMsg');
 });
+
+Route::group(['middleware'=> 'web'],function(){
+});
+Route::group(['middleware'=> 'web'],function(){
+});
+//analysis_request Routes
+Route::group(['middleware'=> 'web'],function(){
+  Route::resource('analysis_request','\App\Http\Controllers\Analysis_requestController');
+  Route::post('analysis_request/{id}/update','\App\Http\Controllers\Analysis_requestController@update');
+  Route::get('analysis_request/{id}/delete','\App\Http\Controllers\Analysis_requestController@destroy');
+  Route::get('analysis_request/{id}/deleteMsg','\App\Http\Controllers\Analysis_requestController@DeleteMsg');
+});

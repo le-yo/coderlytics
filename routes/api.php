@@ -23,6 +23,7 @@ Route::group(['middleware' => 'auth:api'], function () {
     // Voters
     Route::group(['prefix' => 'TechAnalysis'], function () {
         Route::post('request', ['as' => 'techanalysis.request', 'uses' => 'Api\TechAnalysisController@request']);
+        Route::get('testJob', ['as' => 'techanalysis.testJob', 'uses' => 'Api\TechAnalysisController@testJob']);
         Route::get('voted', ['as' => 'voters.voted', 'uses' => 'Api\VotersApiController@listVotersWhoHaveVoted']);
         Route::get('not-voted', ['as' => 'voters.not-voted', 'uses' => 'Api\VotersApiController@listVotersWhoHaveNotVoted']);
         Route::post('mark-voted', ['as' => 'voters.mark-voted', 'uses' => 'Api\VotersApiController@markAsVoted']);
