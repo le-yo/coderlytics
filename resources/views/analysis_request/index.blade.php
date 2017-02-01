@@ -17,7 +17,7 @@
             <th>primary_email</th>
             <th>code_repo</th>
             <th>job_type</th>
-            <th>other_details</th>
+            {{--<th>other_details</th>--}}
             <th>status</th>
             <th>actions</th>
         </thead>
@@ -28,8 +28,14 @@
                 <td>{!!$analysis_request->primary_email!!}</td>
                 <td>{!!$analysis_request->code_repo!!}</td>
                 <td>{!!$analysis_request->job_type!!}</td>
-                <td>{!!$analysis_request->other_details!!}</td>
-                <td>{!!$analysis_request->status!!}</td>
+                {{--<td>{!!$analysis_request->other_details!!}</td>--}}
+                @if($analysis_request->status==0)
+                <td>Not started</td>
+                @elseif($analysis_request->status == 1)
+                <td>In progress</td>
+                @elseif($analysis_request->status == 2)
+                <td>Completed</td>
+                @endif
                 <td>
                     <a data-toggle="modal" data-target="#myModal" class = 'delete btn btn-danger btn-xs' data-link = "/analysis_request/{!!$analysis_request->id!!}/deleteMsg" ><i class = 'material-icons'>delete</i></a>
                     <a href = '#' class = 'viewEdit btn btn-primary btn-xs' data-link = '/analysis_request/{!!$analysis_request->id!!}/edit'><i class = 'material-icons'>edit</i></a>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\TechAnalysis;
 use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -73,6 +74,7 @@ class Analysis_requestController extends Controller
         
         $analysis_request->save();
 
+        $this->dispatch(new TechAnalysis(\GuzzleHttp\json_encode($request->all())));
         $pusher = App::make('pusher');
 
         //default pusher notification.

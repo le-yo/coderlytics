@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Analysis_request;
 use App\Jobs\TechAnalysis;
 use App\Log;
+use GrahamCampbell\GitHub\Facades\GitHub;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Validator;
@@ -29,20 +31,34 @@ class TechAnalysisController extends Controller
         if ($validator->fails()) {
             return Response::create(['error' => $validator->errors(), 'code' => 422, 'message' => 'Missing field values'], 422);
         }
-//        $job = (new TechAnalysis(\GuzzleHttp\json_encode($request->all())))->delay(10);
-//        $this->dispatch($job);
+
+        $analysis_request = new Analysis_request();
+
+        $analysis_request->user_id = $user->id;
+
+        $analysis_request->primary_email = $request->primary_email;
+
+        $analysis_request->code_repo = $request->code_repo;
+
+        $analysis_request->job_type = $request->job_type;
+
+        $analysis_request->other_details = json_encode($request->all());
+
+        $analysis_request->status = 0;
+
+        $analysis_request->save();
+
         $this->dispatch(new TechAnalysis(\GuzzleHttp\json_encode($request->all())));
         return Response::create(['success'=>1,'status'=>'0','status_message'=>'Not Started','message'=>'Received new repo to score','code_repo' => $request->input('code_repo'), 'code' => 200], 200);
     }
 
 
     public function testJob(){
-        $data = '{"code_repo":"http:\/\/github.com\/le-yo\/mpesa","primary_email":"leo@devs.mobi","job_type":"test name"}';
 
-        $data = \GuzzleHttp\json_decode($data);
+        $result = GitHub::repo()->show('le-yo', 'mpesa');
 
-        $repo = $data->code_repo;
-        //exit;
+        print_r($result);
+        exit;
 
     }
 

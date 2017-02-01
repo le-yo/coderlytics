@@ -21,6 +21,8 @@
 								<i class="fa fa-dashboard"></i> <span>Analytics</span></i>
 							</a>
 						</li>
+
+						<li class="treeview"><a href="{{url('/analysis_request')}}"><i class="fa fa-users"></i> <span>Analysis Requests</span></a></li>
 						{{--@if(Auth::user()->hasRole('Admin'))--}}
 
 						{{--<li class="header">Administrator</li>--}}
