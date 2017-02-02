@@ -29,7 +29,8 @@ class Analysis_requestController extends Controller
     {
         $title = 'Index - analysis_request';
         $analysis_requests = Analysis_request::paginate(6);
-        return view('analysis_request.index',compact('analysis_requests','title'));
+        $coderlytics = Coderlytic::all();
+        return view('analysis_request.index',compact('analysis_requests','coderlytics','title'));
     }
 
     /**

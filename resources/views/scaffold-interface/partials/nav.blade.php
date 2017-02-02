@@ -3,13 +3,15 @@
             				<!-- Logo -->
             				<a href="{{url('home')}}" class="logo">
             					<!-- mini logo for sidebar mini 50x50 pixels -->
-            					<span class="logo-mini"><b>S</b>IN</span>
+            					{{--<span class="logo-mini"><b>S</b>IN</span>--}}
             					<!-- logo for regular state and mobile devices -->
             					{{--@if(Auth::user()->hasAnyRole(\Spatie\Permission\Models\Role::all()))--}}
             					{{--<span class="logo-lg"><b>{{Auth::user()->roles->first()->name}}</b></span>--}}
             					{{--<span class="logo-lg"><b>user</b></span>--}}
             					{{--@else--}}
-            					<span class="logo-lg"><b>Welcome</b></span>
+            					<span class="logo-lg"><b>BRAVE<br>
+            				analytics</b></span><br>
+
             					{{--@endif--}}
             				</a>
             				<!-- Header Navbar: style can be found in header.less -->

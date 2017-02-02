@@ -91,9 +91,9 @@
         <div class="col-md-9">
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#activity" data-toggle="tab">Code Repo + Portfolio</a></li>
-              <li><a href="#timeline" data-toggle="tab">Essay + Twitter Analysis</a></li>
-              <li><a href="#settings" data-toggle="tab">Linkedln + CV</a></li>
+              <li class="active"><a href="#activity" data-toggle="tab">Code Quality</a></li>
+              <li><a href="#timeline" data-toggle="tab">Personality</a></li>
+              <li><a href="#settings" data-toggle="tab">Historical Skills</a></li>
             </ul>
             <div class="tab-content">
               <div class="active tab-pane" id="activity">

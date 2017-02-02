@@ -18,7 +18,8 @@
             <link rel="stylesheet" href="{{ URL::asset('plugins/datepicker/datepicker3.css') }}">
 
             <link rel="stylesheet" href="{{ URL::asset('plugins/datatables/dataTables.bootstrap.css') }}">
-
+            <link href='//fonts.googleapis.com/css?family=Lustria' rel='stylesheet'>
+            <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.5/css/skins/_all-skins.min.css">
 		 <link rel="stylesheet" href="{{ URL::asset('css/custom.css') }}">
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
