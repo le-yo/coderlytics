@@ -17,7 +17,7 @@
 
               <h3 class="profile-username text-center">{{ucwords($coderlytic->first_name)}}</h3>
 
-              <p class="text-muted text-center">{{ucwords($user_details->company)}}</p>
+              <p class="text-muted text-center">{{ucwords($user_details->location)}}</p>
 
               <ul class="list-group list-group-unbordered">
                <li class="list-group-item">
