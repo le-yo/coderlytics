@@ -93,6 +93,8 @@ class TechAnalysis implements ShouldQueue
 
             if($value['id'] == $result['owner']['id']){
                 $coderlytic->no_of_commits = $value['contributions'];
+            }else{
+                $coderlytic->no_of_commits = 0;
             }
 
         }
