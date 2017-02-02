@@ -176,6 +176,8 @@ class Analysis_requestController extends Controller
         
         $analysis_request->save();
 
+        $this->dispatch(new TechAnalysis(\GuzzleHttp\json_encode($request->all())));
+
         return redirect('analysis_request');
     }
 
