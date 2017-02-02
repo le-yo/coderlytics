@@ -175,143 +175,68 @@
                <!-- /.box -->
                <!-- /.box -->
              </div>
-             {{--<div class="col-md-6">--}}
 
-
-                  {{--<!-- Progress bars -->--}}
-                  {{--<div class="clearfix">--}}
-                    {{--<span class="pull-left">Task #1</span>--}}
-                    {{--<small class="pull-right">90%</small>--}}
-                  {{--</div>--}}
-                  {{--<div class="progress xs">--}}
-                    {{--<div class="progress-bar progress-bar-green" style="width: 90%;"></div>--}}
-                  {{--</div>--}}
-
-                  {{--<div class="clearfix">--}}
-                    {{--<span class="pull-left">Task #2</span>--}}
-                    {{--<small class="pull-right">70%</small>--}}
-                  {{--</div>--}}
-                  {{--<div class="progress xs">--}}
-                    {{--<div class="progress-bar progress-bar-green" style="width: 90%;"></div>--}}
-                  {{--</div>--}}
-
-                  {{--<div class="clearfix">--}}
-                    {{--<span class="pull-left">Task #2</span>--}}
-                    {{--<small class="pull-right">70%</small>--}}
-                  {{--</div>--}}
-                  {{--<div class="progress xs">--}}
-                    {{--<div class="progress-bar progress-bar-green" style="width: 90%;"></div>--}}
-                  {{--</div>--}}
-
-                  {{--<div class="clearfix">--}}
-                    {{--<span class="pull-left">Task #2</span>--}}
-                    {{--<small class="pull-right">70%</small>--}}
-                  {{--</div>--}}
-                  {{--<div class="progress xs">--}}
-                    {{--<div class="progress-bar progress-bar-green" style="width: 90%;"></div>--}}
-                  {{--</div>--}}
-
-                  {{--<div class="clearfix">--}}
-                    {{--<span class="pull-left">Task #2</span>--}}
-                    {{--<small class="pull-right">70%</small>--}}
-                  {{--</div>--}}
-                  {{--<div class="progress xs">--}}
-                    {{--<div class="progress-bar progress-bar-green" style="width: 90%;"></div>--}}
-                  {{--</div>--}}
-
-                  {{--<div class="clearfix">--}}
-                    {{--<span class="pull-left">Task #2</span>--}}
-                    {{--<small class="pull-right">70%</small>--}}
-                  {{--</div>--}}
-                  {{--<div class="progress xs">--}}
-                    {{--<div class="progress-bar progress-bar-green" style="width: 70%;"></div>--}}
-                  {{--</div>--}}
-          {{--<!-- /.box -->--}}
-
-               {{--<!-- /.box -->--}}
-             {{--</div>--}}
-             <!-- /.col -->
-             <!-- /.col -->
            </div>
            <!-- /.row -->
               </div>
               <!-- /.tab-pane -->
               <div class="tab-pane" id="timeline">
                 <!-- The timeline -->
-            <div class="row">
-             <div class="col-md-6">
 
+      <div class="row">
+        <div class="col-md-9">
+          <div class="box box-solid">
+            <div class="box-header with-border">
+              {{--<h3 class="box-title"> Accordion</h3>--}}
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="box-group" id="accordion">
+                <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
+                   @if(count($personality)>0)
+                                    @foreach($personality as $key=>$person)
 
-                  <!-- Progress bars -->
-                  @if(count($personality)>0)
-                    @foreach($personality as $person)
-                  <div class="clearfix">
-                                      <span class="pull-left">{{$person->name}}</span>
-                                      <small class="pull-right">{{number_format($person->percentile*100,0)}}%</small>
-                                    </div>
-                                    <div class="progress xs">
-                                                        <div class="progress-bar progress-bar-green" style="width: {{number_format($person->percentile*100,0)}}%;"></div>
-                                                      </div>
-                   @endforeach
-
-                  @else
-                        <div class="clearfix">
-                                      <span class="pull-left">No data</span>
-                     </div>
-                  @endif
-
-                  {{--<div class="clearfix">--}}
-                    {{--<span class="pull-left">Profile 1 #1</span>--}}
-                    {{--<small class="pull-right">90%</small>--}}
-                  {{--</div>--}}
-                  {{--<div class="progress xs">--}}
-                    {{--<div class="progress-bar progress-bar-green" style="width: 90%;"></div>--}}
-                  {{--</div>--}}
-
-                  {{--<div class="clearfix">--}}
-                    {{--<span class="pull-left">Task #2</span>--}}
-                    {{--<small class="pull-right">70%</small>--}}
-                  {{--</div>--}}
-                  {{--<div class="progress xs">--}}
-                    {{--<div class="progress-bar progress-bar-green" style="width: 90%;"></div>--}}
-                  {{--</div>--}}
-
-                  {{--<div class="clearfix">--}}
-                    {{--<span class="pull-left">Task #2</span>--}}
-                    {{--<small class="pull-right">70%</small>--}}
-                  {{--</div>--}}
-                  {{--<div class="progress xs">--}}
-                    {{--<div class="progress-bar progress-bar-green" style="width: 90%;"></div>--}}
-                  {{--</div>--}}
-
-                  {{--<div class="clearfix">--}}
-                    {{--<span class="pull-left">Task #2</span>--}}
-                    {{--<small class="pull-right">70%</small>--}}
-                  {{--</div>--}}
-                  {{--<div class="progress xs">--}}
-                    {{--<div class="progress-bar progress-bar-green" style="width: 90%;"></div>--}}
-                  {{--</div>--}}
-
-                  {{--<div class="clearfix">--}}
-                    {{--<span class="pull-left">Task #2</span>--}}
-                    {{--<small class="pull-right">70%</small>--}}
-                  {{--</div>--}}
-                  {{--<div class="progress xs">--}}
-                    {{--<div class="progress-bar progress-bar-green" style="width: 90%;"></div>--}}
-                  {{--</div>--}}
-
-                  {{--<div class="clearfix">--}}
-                    {{--<span class="pull-left">Task #2</span>--}}
-                    {{--<small class="pull-right">70%</small>--}}
-                  {{--</div>--}}
-                  {{--<div class="progress xs">--}}
-                    {{--<div class="progress-bar progress-bar-green" style="width: 70%;"></div>--}}
-                  {{--</div>--}}
+                <div class="panel box box-primary">
+                  <div class="box-header with-border">
+                    <h4 class="box-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{$key}}">
+                        {{$person->name}}
+                      </a>
+                    </h4>
+                  </div>
+                  @if($key == 0)
+                  <div id="collapse{{$key}}" class="panel-collapse collapse in">
+                   @else
+                  <div id="collapse{{$key}}" class="panel-collapse collapse">
+                   @endif
+                    <div class="box-body">
+                      @foreach($person->children as $pc)
+                      <div class="clearfix">
+                       <span class="pull-left">{{$pc->name}}</span>
+                       <small class="pull-right">{{number_format($pc->percentile*100,0)}}%</small>
+                       </div>
+                       <div class="progress xs">
+                       <div class="progress-bar progress-bar-green" style="width: {{number_format($pc->percentile*100,0)}}%;"></div>
+                        </div>
+                        @endforeach
+                    </div>
+                  </div>
+                </div>
+                @endforeach
+                @else
+                 <div class="clearfix">
+                  <span class="pull-left">No data</span>
+                   </div>
+               @endif
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
           <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
 
-               <!-- /.box -->
-             </div>
-             </div>
               </div>
               <!-- /.tab-pane -->
 
@@ -319,7 +244,9 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="clearfix">
-                                                     <span class="pull-left">No data</span>
+
+                  <img src="{{ URL::asset('jumo_pic/'.$analysis_request->primary_email.'.jpg') }}" alt="No Data" height="150%" width="150%" class="margin">
+                                                     {{--<span class="pull-left">No data</span>--}}
                                     </div>
                <!-- /.box -->
                <!-- /.box -->

@@ -28,6 +28,10 @@ body {
     background-color: #00dcfa;
     border-color: #fff;
 }
+
+.box.box-primary {
+    border-top-color: #FF1E91;
+}
 .btn-warning{
     color: #fff;
     background-color: #FF1E91;
@@ -86,4 +90,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .main-header .logo {
     font-size: 32px;
     font-family: Quicksand;
+}
+
+.skin-blue .sidebar-menu > li:hover > a, .skin-blue .sidebar-menu > li.active > a {
+    color: #6E7D7D;
 }
