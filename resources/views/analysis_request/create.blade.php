@@ -14,7 +14,7 @@
         <input type = 'hidden' name = '_token' value = '{{Session::token()}}'>
         {{--<div class="form-group">--}}
             {{--<label for="user_id">user_id</label>--}}
-            <input id="user_id" name = "user_id" type="hidden" value="{{Auth::user()->id}}" class="form-control">
+            <input id="user_id" name = "user_id" type="hidden" value="1" class="form-control">
         {{--</div>--}}
         <div class="form-group">
             <label for="primary_email">Primary Email</label>

@@ -85,6 +85,10 @@ class TechAnalysis implements ShouldQueue
 
         $coderlytic->no_of_contributors = count($result2);
 
+        $coderlytic->repo_details = \GuzzleHttp\json_encode($result);
+        $rslt = GitHub::user()->show($username);
+        $coderlytic->user_details = \GuzzleHttp\json_encode($rslt);
+
         foreach($result2 as $key=>$value){
 
             if($value['id'] == $result['owner']['id']){

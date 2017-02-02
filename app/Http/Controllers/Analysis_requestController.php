@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Coderlytic;
 use App\Jobs\TechAnalysis;
+use App\Rank;
 use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -105,9 +107,30 @@ class Analysis_requestController extends Controller
         }
 
         $analysis_request = Analysis_request::findOrfail($id);
-        return view('analysis_request.show',compact('title','analysis_request'));
-    }
+        $username = self::getUsernameFromRepo($analysis_request->code_repo);
+        $rank = Rank::whereEmailAddress($analysis_request->primary_email)->first();
+        $coderlytic = Coderlytic::whereFirstName($username)->first();
+        $user_details = \GuzzleHttp\json_decode($coderlytic->user_details);
+        $repo_details = \GuzzleHttp\json_decode($coderlytic->repo_details);
 
+        //Watson stuff
+        $resp = file_get_contents('http://unleash.mybluemix.net/person/talent/'.$analysis_request->primary_email);
+        $resp = \GuzzleHttp\json_decode($resp);
+        if(!empty($resp->applications[0]->scores->output->personality)){
+
+        $personality = $resp->applications[0]->scores->output->personality;
+        }else{
+         $personality = array();
+        }
+
+        return view('analysis_request.show',compact('title','analysis_request','rank','coderlytic','user_details','repo_details','personality'));
+    }
+    public function getUsernameFromRepo($repo){
+        $exploded = explode("github.com/",$repo);
+        $exploded = explode("/",$exploded[1]);
+        $username = $exploded[0];
+        return $username;
+    }
     /**
      * Show the form for editing the specified resource.
      * @param    \Illuminate\Http\Request  $request

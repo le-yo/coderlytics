@@ -55,8 +55,10 @@ class TechAnalysisController extends Controller
 
     public function testJob(){
 
-        $result = GitHub::repo()->show('le-yo', 'mpesa');
+        //$result = GitHub::repo()->show('le-yo', 'mpesa');
+        $result = GitHub::user()->show('le-yo');
 
+        //$client->api('user')->find('KnpLabs');
         print_r($result);
         exit;
 
