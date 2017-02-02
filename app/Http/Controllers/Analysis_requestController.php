@@ -159,6 +159,8 @@ class Analysis_requestController extends Controller
      */
     public function update($id,Request $request)
     {
+//        print_r($request->all());
+//        exit;
         $analysis_request = Analysis_request::findOrfail($id);
     	
         $analysis_request->user_id = $request->user_id;
@@ -171,9 +173,8 @@ class Analysis_requestController extends Controller
         
         $analysis_request->other_details = $request->other_details;
         
-        $analysis_request->status = $request->status;
-        
-        
+        $analysis_request->status = 0;
+
         $analysis_request->save();
 
         $this->dispatch(new TechAnalysis(\GuzzleHttp\json_encode($request->all())));
