@@ -110,8 +110,19 @@ class Analysis_requestController extends Controller
         $username = self::getUsernameFromRepo($analysis_request->code_repo);
         $rank = Rank::whereEmailAddress($analysis_request->primary_email)->first();
         $coderlytic = Coderlytic::whereFirstName($username)->first();
+        if(!empty($user_details)){
+
         $user_details = \GuzzleHttp\json_decode($coderlytic->user_details);
-        $repo_details = \GuzzleHttp\json_decode($coderlytic->repo_details);
+        }else{
+            $user_details= array();
+        }
+
+        if(!empty($repo_details)){
+
+            $user_details = \GuzzleHttp\json_decode($coderlytic->user_details);
+        }else{
+            $user_details = array();
+        }
 
         //Watson stuff
         $resp = file_get_contents('http://unleash.mybluemix.net/person/talent/'.$analysis_request->primary_email);

@@ -48,17 +48,14 @@ class TechAnalysisController extends Controller
 
         $analysis_request->save();
 
-        $this->dispatch(new TechAnalysis(\GuzzleHttp\json_encode($request->all())));
+        $this->dispatch(new TechAnalysis(\GuzzleHttp\json_encode($analysis_request)));
         return Response::create(['success'=>1,'status'=>'0','status_message'=>'Not Started','message'=>'Received new repo to score','code_repo' => $request->input('code_repo'), 'code' => 200], 200);
     }
 
 
     public function testJob(){
 
-        //$result = GitHub::repo()->show('le-yo', 'mpesa');
         $result = GitHub::user()->show('le-yo');
-
-        //$client->api('user')->find('KnpLabs');
         print_r($result);
         exit;
 
