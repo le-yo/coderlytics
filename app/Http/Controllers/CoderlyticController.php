@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Rank;
 use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Coderlytic;
 use Amranidev\Ajaxis\Ajaxis;
+use Illuminate\Support\Facades\File;
 use Maatwebsite\Excel\Facades\Excel;
 use URL;
 use GrahamCampbell\GitHub\Facades\GitHub;
@@ -369,6 +371,166 @@ class CoderlyticController extends Controller
      * @return  \Illuminate\Http\Response
      */
     public function upload(Request $request) {
+
+
+        ini_set('max_execution_time', 180);
+
+        // getting all of the post data
+        $file = array('xls' => $request->file('xls'));
+        // setting up rules
+        $rules = array('xls' => 'required',); //mimes:jpeg,bmp,png and for max size max:10000
+
+        $extension = $request->file('xls')->getClientOriginalExtension(); // getting the file extension
+
+        $fileName = rand(11111,99999).'.'.$extension; // renaming the file
+
+        $request->file('xls')->move('storage',$fileName); // move it to the storage folder in the public assets
+
+        Excel::load('storage/'.$fileName, function($reader) {
+
+            $reader->formatDates(false);
+            $results = $reader->skip(0)->get();
+
+            $results -> each(function($sheet) {
+
+                $email_address = $sheet->email_address;
+
+                if(!empty($sheet->email_address)) {
+
+                    $rank = Rank::whereEmailAddress($email_address)->first();
+                    if (!$rank) {
+                        $rank = new Rank();
+                    }
+
+                    $rank->first_name = $sheet->first_name;
+
+                    $rank->second_name = $sheet->second_name;
+
+
+                    $rank->email_address = $sheet->email_address;
+
+
+                    $rank->Organization = $sheet->organization;
+
+                    $rank->dev_manager = $sheet->dev_manager;
+
+
+                    $rank->senior_dev = $sheet->senior_dev;
+
+
+                    $rank->scrum = $sheet->scrum;
+
+
+                    $rank->devops = $sheet->devops;
+
+
+                    $rank->architect = $sheet->architect;
+
+
+                    $rank->product_owner = $sheet->product_owner;
+
+
+                    $rank->quality_lead = $sheet->quality_lead;
+
+                    $rank->tester = $sheet->tester;
+
+                    $rank->junior_dev = $sheet->junior_dev;
+
+                    $rank->save();
+                }
+            });
+        });
+
+        File::delete('storage/'.$fileName);
+
+
+
+
+        ini_set('max_execution_time', 180);
+
+        $file = array('xls' => $request->file('xls'));
+//
+        $rules = array('xls' => 'required',); //mimes:jpeg,bmp,png and for max size max:10000
+
+        $extension = $request->file('xls')->getClientOriginalExtension(); // getting the file extension
+
+        $fileName = rand(11111,99999).'.'.$extension; // renaming the file
+
+
+        $request->file('xls')->move('storage',$fileName); // move it to the storage folder in the public assets
+
+//        print_r($fileName);
+//        exit;
+//        $results = Excel::selectSheetsByIndex(1)->load();
+//        print_r($results);
+//        exit;
+        //Excel::selectSheets('sheet1')->load();
+        Excel::selectSheetsByIndex(1)->load('storage/'.$fileName, function($reader) {
+            $reader->dump();
+            exit;
+            $reader->each(function($sheet) {
+
+                print_r($sheet);
+        exit;
+
+                $email_address = $sheet->email_address;
+
+                if(!empty($sheet->email_address)){
+
+                    $rank = Rank::whereEmailAddress($email_address)->first();
+                    if(!$rank){
+                        $rank = new Rank();
+                    }
+
+                    $rank->first_name = $sheet->first_name;
+
+                    print_r($rank);
+                    exit;
+                    $rank->second_name = $sheet->second_name;
+
+
+                    $rank->email_address = $sheet->email_address;
+
+
+                    $rank->Organization = $sheet->Organization;
+
+
+                    $rank->dev_manager = $sheet->dev_manager;
+
+
+                    $rank->senior_dev = $sheet->senior_dev;
+
+
+                    $rank->scrum = $sheet->scrum;
+
+
+                    $rank->devops = $sheet->devops;
+
+
+                    $rank->architect = $sheet->architect;
+
+
+                    $rank->product_owner = $sheet->product_owner;
+
+
+                    $rank->quality_lead = $sheet->quality_lead;
+
+                    $rank->tester = $sheet->tester;
+
+                    $rank->junior_dev = $sheet->junior_dev;
+
+                    $rank->save();
+
+                }
+
+            });
+        });
+
+        return redirect('coderlytic');
+
+    }
+
+    public function uploadScore(Request $request) {
 
         ini_set('max_execution_time', 180);
 

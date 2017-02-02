@@ -16,6 +16,8 @@
 		folder instead of downloading all of them to reduce the load. -->
 
             <link rel="stylesheet" href="{{ URL::asset('plugins/datepicker/datepicker3.css') }}">
+
+            <link rel="stylesheet" href="{{ URL::asset('plugins/datatables/dataTables.bootstrap.css') }}">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.5/css/skins/_all-skins.min.css">
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

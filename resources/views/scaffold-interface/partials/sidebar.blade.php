@@ -18,11 +18,14 @@
 						<li class="header">MAIN NAVIGATION</li>
 						<li class="active treeview">
 							<a href="{{url('coderlytic')}}">
-								<i class="fa fa-dashboard"></i> <span>Analytics</span></i>
+								{{--<i class="fa fa-dashboard"></i> <span>Analytics</span></i>--}}
 							</a>
 						</li>
 
-						<li class="treeview"><a href="{{url('/analysis_request')}}"><i class="fa fa-users"></i> <span>Analysis Requests</span></a></li>
+						<li class="treeview"><a href="#"><i class="fa fa-users"></i> <span>Requirements</span></a></li>
+						<li class="treeview"><a href="{{url('/analysis_request')}}"><i class="fa fa-users"></i> <span>Analysis</span></a></li>
+						<li class="treeview"><a href="#"><i class="fa fa-users"></i> <span>Scoring</span></a></li>
+						<li class="treeview"><a href="{{url('/rank')}}"><i class="fa fa-users"></i> <span>Rank</span></a></li>
 						{{--@if(Auth::user()->hasRole('Admin'))--}}
 
 						{{--<li class="header">Administrator</li>--}}

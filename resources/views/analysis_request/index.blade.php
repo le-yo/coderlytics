@@ -4,10 +4,10 @@
 
 <section class="content">
     <h1>
-        Analysis_request Index
+        Analysis
     </h1>
     <form class = 'col s3' method = 'get' action = '{!!url("analysis_request")!!}/create'>
-        <button class = 'btn btn-primary' type = 'submit'>Create New analysis_request</button>
+        <button class = 'btn btn-primary' type = 'submit'>New Analysis Request</button>
     </form>
     <br>
     <br>

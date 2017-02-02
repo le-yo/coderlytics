@@ -91,61 +91,6 @@
       <div class="row">
 
              <div class="col-md-6">
-
-
-                  <!-- Progress bars -->
-                  <div class="clearfix">
-                    <span class="pull-left">Task #1</span>
-                    <small class="pull-right">90%</small>
-                  </div>
-                  <div class="progress xs">
-                    <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
-                  </div>
-
-                  <div class="clearfix">
-                    <span class="pull-left">Task #2</span>
-                    <small class="pull-right">70%</small>
-                  </div>
-                  <div class="progress xs">
-                    <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
-                  </div>
-
-                  <div class="clearfix">
-                    <span class="pull-left">Task #2</span>
-                    <small class="pull-right">70%</small>
-                  </div>
-                  <div class="progress xs">
-                    <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
-                  </div>
-
-                  <div class="clearfix">
-                    <span class="pull-left">Task #2</span>
-                    <small class="pull-right">70%</small>
-                  </div>
-                  <div class="progress xs">
-                    <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
-                  </div>
-
-                  <div class="clearfix">
-                    <span class="pull-left">Task #2</span>
-                    <small class="pull-right">70%</small>
-                  </div>
-                  <div class="progress xs">
-                    <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
-                  </div>
-
-                  <div class="clearfix">
-                    <span class="pull-left">Task #2</span>
-                    <small class="pull-right">70%</small>
-                  </div>
-                  <div class="progress xs">
-                    <div class="progress-bar progress-bar-green" style="width: 70%;"></div>
-                  </div>
-          <!-- /.box -->
-
-               <!-- /.box -->
-             </div>
-             <div class="col-md-6">
                <div class="box">
                  <div class="box-header with-border">
                    <h3 class="box-title">Bordered Table</h3>
@@ -215,6 +160,61 @@
                <!-- /.box -->
                <!-- /.box -->
              </div>
+             <div class="col-md-6">
+
+
+                  <!-- Progress bars -->
+                  <div class="clearfix">
+                    <span class="pull-left">Task #1</span>
+                    <small class="pull-right">90%</small>
+                  </div>
+                  <div class="progress xs">
+                    <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
+                  </div>
+
+                  <div class="clearfix">
+                    <span class="pull-left">Task #2</span>
+                    <small class="pull-right">70%</small>
+                  </div>
+                  <div class="progress xs">
+                    <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
+                  </div>
+
+                  <div class="clearfix">
+                    <span class="pull-left">Task #2</span>
+                    <small class="pull-right">70%</small>
+                  </div>
+                  <div class="progress xs">
+                    <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
+                  </div>
+
+                  <div class="clearfix">
+                    <span class="pull-left">Task #2</span>
+                    <small class="pull-right">70%</small>
+                  </div>
+                  <div class="progress xs">
+                    <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
+                  </div>
+
+                  <div class="clearfix">
+                    <span class="pull-left">Task #2</span>
+                    <small class="pull-right">70%</small>
+                  </div>
+                  <div class="progress xs">
+                    <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
+                  </div>
+
+                  <div class="clearfix">
+                    <span class="pull-left">Task #2</span>
+                    <small class="pull-right">70%</small>
+                  </div>
+                  <div class="progress xs">
+                    <div class="progress-bar progress-bar-green" style="width: 70%;"></div>
+                  </div>
+          <!-- /.box -->
+
+               <!-- /.box -->
+             </div>
              <!-- /.col -->
              <!-- /.col -->
            </div>
@@ -223,152 +223,139 @@
               <!-- /.tab-pane -->
               <div class="tab-pane" id="timeline">
                 <!-- The timeline -->
-                <ul class="timeline timeline-inverse">
-                  <!-- timeline time label -->
-                  <li class="time-label">
-                        <span class="bg-red">
-                          10 Feb. 2014
-                        </span>
-                  </li>
-                  <!-- /.timeline-label -->
-                  <!-- timeline item -->
-                  <li>
-                    <i class="fa fa-envelope bg-blue"></i>
+            <div class="row">
+             <div class="col-md-6">
 
-                    <div class="timeline-item">
-                      <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
 
-                      <h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>
+                  <!-- Progress bars -->
+                  <div class="clearfix">
+                    <span class="pull-left">Task #1</span>
+                    <small class="pull-right">90%</small>
+                  </div>
+                  <div class="progress xs">
+                    <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
+                  </div>
 
-                      <div class="timeline-body">
-                        Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
-                        weebly ning heekya handango imeem plugg dopplr jibjab, movity
-                        jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
-                        quora plaxo ideeli hulu weebly balihoo...
-                      </div>
-                      <div class="timeline-footer">
-                        <a class="btn btn-primary btn-xs">Read more</a>
-                        <a class="btn btn-danger btn-xs">Delete</a>
-                      </div>
-                    </div>
-                  </li>
-                  <!-- END timeline item -->
-                  <!-- timeline item -->
-                  <li>
-                    <i class="fa fa-user bg-aqua"></i>
+                  <div class="clearfix">
+                    <span class="pull-left">Task #2</span>
+                    <small class="pull-right">70%</small>
+                  </div>
+                  <div class="progress xs">
+                    <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
+                  </div>
 
-                    <div class="timeline-item">
-                      <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>
+                  <div class="clearfix">
+                    <span class="pull-left">Task #2</span>
+                    <small class="pull-right">70%</small>
+                  </div>
+                  <div class="progress xs">
+                    <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
+                  </div>
 
-                      <h3 class="timeline-header no-border"><a href="#">Sarah Young</a> accepted your friend request
-                      </h3>
-                    </div>
-                  </li>
-                  <!-- END timeline item -->
-                  <!-- timeline item -->
-                  <li>
-                    <i class="fa fa-comments bg-yellow"></i>
+                  <div class="clearfix">
+                    <span class="pull-left">Task #2</span>
+                    <small class="pull-right">70%</small>
+                  </div>
+                  <div class="progress xs">
+                    <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
+                  </div>
 
-                    <div class="timeline-item">
-                      <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
+                  <div class="clearfix">
+                    <span class="pull-left">Task #2</span>
+                    <small class="pull-right">70%</small>
+                  </div>
+                  <div class="progress xs">
+                    <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
+                  </div>
 
-                      <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
+                  <div class="clearfix">
+                    <span class="pull-left">Task #2</span>
+                    <small class="pull-right">70%</small>
+                  </div>
+                  <div class="progress xs">
+                    <div class="progress-bar progress-bar-green" style="width: 70%;"></div>
+                  </div>
+          <!-- /.box -->
 
-                      <div class="timeline-body">
-                        Take me to your leader!
-                        Switzerland is small and neutral!
-                        We are more like Germany, ambitious and misunderstood!
-                      </div>
-                      <div class="timeline-footer">
-                        <a class="btn btn-warning btn-flat btn-xs">View comment</a>
-                      </div>
-                    </div>
-                  </li>
-                  <!-- END timeline item -->
-                  <!-- timeline time label -->
-                  <li class="time-label">
-                        <span class="bg-green">
-                          3 Jan. 2014
-                        </span>
-                  </li>
-                  <!-- /.timeline-label -->
-                  <!-- timeline item -->
-                  <li>
-                    <i class="fa fa-camera bg-purple"></i>
-
-                    <div class="timeline-item">
-                      <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
-
-                      <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
-
-                      <div class="timeline-body">
-                        <img src="http://placehold.it/150x100" alt="..." class="margin">
-                        <img src="http://placehold.it/150x100" alt="..." class="margin">
-                        <img src="http://placehold.it/150x100" alt="..." class="margin">
-                        <img src="http://placehold.it/150x100" alt="..." class="margin">
-                      </div>
-                    </div>
-                  </li>
-                  <!-- END timeline item -->
-                  <li>
-                    <i class="fa fa-clock-o bg-gray"></i>
-                  </li>
-                </ul>
+               <!-- /.box -->
+             </div>
+             </div>
               </div>
               <!-- /.tab-pane -->
 
               <div class="tab-pane" id="settings">
-                <form class="form-horizontal">
-                  <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label">Name</label>
-
-                    <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputName" placeholder="Name">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
-
-                    <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label">Name</label>
-
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputName" placeholder="Name">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
-
-                    <div class="col-sm-10">
-                      <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
-
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-danger">Submit</button>
-                    </div>
-                  </div>
-                </form>
+            <div class="row">
+              <div class="col-md-6">
+               <div class="box">
+                 <div class="box-header with-border">
+                   <h3 class="box-title">Bordered Table</h3>
+                 </div>
+                 <!-- /.box-header -->
+                 <div class="box-body">
+                   <table class="table table-bordered">
+                     <tr>
+                       <th style="width: 10px">#</th>
+                       <th>Task</th>
+                       <th>Progress</th>
+                       <th style="width: 40px">Label</th>
+                     </tr>
+                     <tr>
+                       <td>1.</td>
+                       <td>Update software</td>
+                       <td>
+                         <div class="progress progress-xs">
+                           <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+                         </div>
+                       </td>
+                       <td><span class="badge bg-red">55%</span></td>
+                     </tr>
+                     <tr>
+                       <td>2.</td>
+                       <td>Clean database</td>
+                       <td>
+                         <div class="progress progress-xs">
+                           <div class="progress-bar progress-bar-yellow" style="width: 70%"></div>
+                         </div>
+                       </td>
+                       <td><span class="badge bg-yellow">70%</span></td>
+                     </tr>
+                     <tr>
+                       <td>3.</td>
+                       <td>Cron job running</td>
+                       <td>
+                         <div class="progress progress-xs progress-striped active">
+                           <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
+                         </div>
+                       </td>
+                       <td><span class="badge bg-light-blue">30%</span></td>
+                     </tr>
+                     <tr>
+                       <td>4.</td>
+                       <td>Fix and squish bugs</td>
+                       <td>
+                         <div class="progress progress-xs progress-striped active">
+                           <div class="progress-bar progress-bar-success" style="width: 90%"></div>
+                         </div>
+                       </td>
+                       <td><span class="badge bg-green">90%</span></td>
+                     </tr>
+                   </table>
+                 </div>
+                 <!-- /.box-body -->
+                 <div class="box-footer clearfix">
+                   <ul class="pagination pagination-sm no-margin pull-right">
+                     <li><a href="#">&laquo;</a></li>
+                     <li><a href="#">1</a></li>
+                     <li><a href="#">2</a></li>
+                     <li><a href="#">3</a></li>
+                     <li><a href="#">&raquo;</a></li>
+                   </ul>
+                 </div>
+               </div>
+               <!-- /.box -->
+               <!-- /.box -->
+             </div>
+             </div>
               </div>
               <!-- /.tab-pane -->
             </div>
@@ -383,60 +370,60 @@
     </section>
 
 
-<section class="content">
-    <h1>
-        Show analysis_request
-    </h1>
-    <br>
-    <form method = 'get' action = '{!!url("analysis_request")!!}'>
-        <button class = 'btn btn-primary'>analysis_request Index</button>
-    </form>
-    <br>
-    <table class = 'table table-bordered'>
-        <thead>
-            <th>Key</th>
-            <th>Value</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <b><i>user_id : </i></b>
-                </td>
-                <td>{!!$analysis_request->user_id!!}</td>
-            </tr>
-            <tr>
-                <td>
-                    <b><i>primary_email : </i></b>
-                </td>
-                <td>{!!$analysis_request->primary_email!!}</td>
-            </tr>
-            <tr>
-                <td>
-                    <b><i>code_repo : </i></b>
-                </td>
-                <td>{!!$analysis_request->code_repo!!}</td>
-            </tr>
-            <tr>
-                <td>
-                    <b><i>job_type : </i></b>
-                </td>
-                <td>{!!$analysis_request->job_type!!}</td>
-            </tr>
-            <tr>
-                <td>
-                    <b><i>other_details : </i></b>
-                </td>
-                <td>{!!$analysis_request->other_details!!}</td>
-            </tr>
-            <tr>
-                <td>
-                    <b><i>status : </i></b>
-                </td>
-                <td>{!!$analysis_request->status!!}</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
+{{--<section class="content">--}}
+    {{--<h1>--}}
+        {{--Show analysis_request--}}
+    {{--</h1>--}}
+    {{--<br>--}}
+    {{--<form method = 'get' action = '{!!url("analysis_request")!!}'>--}}
+        {{--<button class = 'btn btn-primary'>analysis_request Index</button>--}}
+    {{--</form>--}}
+    {{--<br>--}}
+    {{--<table class = 'table table-bordered'>--}}
+        {{--<thead>--}}
+            {{--<th>Key</th>--}}
+            {{--<th>Value</th>--}}
+        {{--</thead>--}}
+        {{--<tbody>--}}
+            {{--<tr>--}}
+                {{--<td>--}}
+                    {{--<b><i>user_id : </i></b>--}}
+                {{--</td>--}}
+                {{--<td>{!!$analysis_request->user_id!!}</td>--}}
+            {{--</tr>--}}
+            {{--<tr>--}}
+                {{--<td>--}}
+                    {{--<b><i>primary_email : </i></b>--}}
+                {{--</td>--}}
+                {{--<td>{!!$analysis_request->primary_email!!}</td>--}}
+            {{--</tr>--}}
+            {{--<tr>--}}
+                {{--<td>--}}
+                    {{--<b><i>code_repo : </i></b>--}}
+                {{--</td>--}}
+                {{--<td>{!!$analysis_request->code_repo!!}</td>--}}
+            {{--</tr>--}}
+            {{--<tr>--}}
+                {{--<td>--}}
+                    {{--<b><i>job_type : </i></b>--}}
+                {{--</td>--}}
+                {{--<td>{!!$analysis_request->job_type!!}</td>--}}
+            {{--</tr>--}}
+            {{--<tr>--}}
+                {{--<td>--}}
+                    {{--<b><i>other_details : </i></b>--}}
+                {{--</td>--}}
+                {{--<td>{!!$analysis_request->other_details!!}</td>--}}
+            {{--</tr>--}}
+            {{--<tr>--}}
+                {{--<td>--}}
+                    {{--<b><i>status : </i></b>--}}
+                {{--</td>--}}
+                {{--<td>{!!$analysis_request->status!!}</td>--}}
+            {{--</tr>--}}
+        {{--</tbody>--}}
+    {{--</table>--}}
+{{--</section>--}}
 @endsection
 
 @section('scripts')

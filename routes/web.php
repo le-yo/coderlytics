@@ -52,3 +52,11 @@ Route::group(['middleware'=> 'web'],function(){
   Route::get('analysis_request/{id}/delete','\App\Http\Controllers\Analysis_requestController@destroy');
   Route::get('analysis_request/{id}/deleteMsg','\App\Http\Controllers\Analysis_requestController@DeleteMsg');
 });
+
+//rank Routes
+Route::group(['middleware'=> 'web'],function(){
+  Route::resource('rank','\App\Http\Controllers\RankController');
+  Route::post('rank/{id}/update','\App\Http\Controllers\RankController@update');
+  Route::get('rank/{id}/delete','\App\Http\Controllers\RankController@destroy');
+  Route::get('rank/{id}/deleteMsg','\App\Http\Controllers\RankController@DeleteMsg');
+});
