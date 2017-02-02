@@ -25,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/coderlytic';
+    protected $redirectTo = '/analysis_request';
 
     /**
      * Create a new controller instance.

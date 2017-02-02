@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'CoderlyticController@index');
+Route::get('/home', '\App\Http\Controllers\Analysis_requestController@index');
 Route::get('/analytics/generate', 'CoderlyticController@generateAnalytics');
 Route::get('/analysis/generate/{id}', 'CoderlyticController@generateAnalytics');
 Route::get('analytics/mastergenerate', 'CoderlyticController@mastergenerate');
