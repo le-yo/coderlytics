@@ -110,18 +110,19 @@ class Analysis_requestController extends Controller
         $username = self::getUsernameFromRepo($analysis_request->code_repo);
         $rank = Rank::whereEmailAddress($analysis_request->primary_email)->first();
         $coderlytic = Coderlytic::whereFirstName($username)->first();
-        if(!empty($user_details)){
+
+        if(!empty($coderlytic->user_details)){
 
         $user_details = \GuzzleHttp\json_decode($coderlytic->user_details);
         }else{
             $user_details= array();
         }
 
-        if(!empty($repo_details)){
+        if(!empty($coderlytic->repo_details)){
 
-            $user_details = \GuzzleHttp\json_decode($coderlytic->user_details);
+            $repo_details = \GuzzleHttp\json_decode($coderlytic->repo_details);
         }else{
-            $user_details = array();
+            $repo_details = array();
         }
 
         //Watson stuff
@@ -133,7 +134,8 @@ class Analysis_requestController extends Controller
         }else{
          $personality = array();
         }
-
+//        print_r($user_details);
+//        exit;
         return view('analysis_request.show',compact('title','analysis_request','rank','coderlytic','user_details','repo_details','personality'));
     }
     public function getUsernameFromRepo($repo){

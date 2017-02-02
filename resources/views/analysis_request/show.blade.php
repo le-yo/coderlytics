@@ -55,7 +55,7 @@
               <strong><i class="fa fa-book margin-r-5"></i> Company</strong>
 
                           <p class="text-muted">
-                            {{$user_details->company}}
+                            {{$user_details->location}}
                           </p>
 
                           <hr>
